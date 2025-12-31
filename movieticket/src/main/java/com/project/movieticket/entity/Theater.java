@@ -28,4 +28,7 @@ public class Theater {
     @NonNull
     private String city;
 
+    @NonNull
+    private int type;
+
 }

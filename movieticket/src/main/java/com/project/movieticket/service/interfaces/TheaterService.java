@@ -8,6 +8,7 @@ public interface TheaterService {
     List<Theater> getAllTheaters();
     Theater getTheaterById(Long id);
     List<Theater> getTheatersByCity(String city);
-    List<Theater> getTheatersByTotalSeats(int totalSeats);
+    List<Theater> getTheatersByType(int type);
+    List<Theater> getTheatersByTotalSeats(int seatcapcity);
 
 }

@@ -1,0 +1,5 @@
+app:
+  prices:
+    regular: 200
+    premium: 280
+    vip: 450

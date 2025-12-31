@@ -32,6 +32,11 @@ public class TheaterServiceimpl implements TheaterService {
     }
 
     @Override
+    public List<Theater> getTheatersByType(int type) {
+        return theaterRepository.findByType(type);
+    }
+
+    @Override
     public List<Theater> getTheatersByTotalSeats(int totalSeats) {
         return theaterRepository.findByTotalSeats(totalSeats);
     }

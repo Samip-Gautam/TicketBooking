@@ -9,4 +9,6 @@ public interface TheaterRepository extends JpaRepository<Theater, Long> {
     List<Theater> findByCity(String city);
 
     List<Theater> findByTotalSeats(int totalSeats);
+
+    List<Theater> findByType(int type);
 }

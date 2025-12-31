@@ -37,4 +37,9 @@ public class TheaterController {
     public List<Theater> getTheatersByTotalSeats(@PathVariable int totalSeats) {
         return theaterService.getTheatersByTotalSeats(totalSeats);
     }
+
+    @GetMapping("/type/{type}")
+    public List<Theater> getTheatersByType(@PathVariable int type) {
+        return theaterService.getTheatersByType(type);
+    }
 }
