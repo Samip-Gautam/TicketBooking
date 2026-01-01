@@ -1,5 +1,4 @@
 app:
-  prices:
-    regular: 200
-    premium: 280
-    vip: 450
+  regular-price: 200
+  premium-price: 280
+  vip-price: 450
