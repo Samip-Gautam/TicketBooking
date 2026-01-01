@@ -11,14 +11,12 @@ import org.springframework.web.bind.annotation.*;
 public class BookingController {
     private final BookingService bookingService;
 
-    // ✅ PRICE CALCULATION (Main feature)
     @PostMapping("/price")
     public ResponseEntity<Double> calculatePrice(@RequestBody PriceRequest request) {
         double price = bookingService.calculatePrice(request.theaterId(), request.seatCount());
         return ResponseEntity.ok(price);
     }
 
-    // ✅ ALL PLANS (Theater pricing overview)
     @GetMapping("/plans")
     public ResponseEntity<String> getAllPlans() {
         return ResponseEntity.ok("""
@@ -30,7 +28,6 @@ public class BookingController {
                 """);
     }
 
-    // ✅ SINGLE THEATER PRICE CHECK
     @GetMapping("/price/{theaterId}/{seatCount}")
     public ResponseEntity<Double> getPrice(@PathVariable Long theaterId, @PathVariable int seatCount) {
         double price = bookingService.calculatePrice(theaterId, seatCount);
